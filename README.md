@@ -2,17 +2,36 @@
 Ajaxcall.js allows you to Send Data via HTTP request, by assigning event handlers on HTML Elements. 
 
 See Example below;
-//This will assign an Event to that button when Clicked, to send request over GET
-<button ajax-url="/api/follow/member/1">Follow Me</button>
+<h3 class="ui header blue">TEST A BUTTON [ajax-url]</h3>
+  <div class="ui divider"></div> 
 
-//Appending Data
-<button ajax-url="/api/follow/" ajax-data='{"member":1, "user":"facebook"}' > Follow me</button>
+    <p align="center">
+        <button class="ui basic blue button" ajax-url="http://localhost/test/test_server.php" ajax-type="POST" ajax-data='{"name":"John Kiringel", "age":30, "city":"New York"}'><i class="plus icon"></i>New Folder</button>
+    </p>
+	
+<h3 class="ui header blue">TEST A DIV [ajax-loader]</h3>
+  <div class="ui divider"></div> 
+	
 
-//This Ajax Call Supports also calling data over http to load element inside another element
-<code ajax-loader="/api/listOfUsers">
+
+
+
+<br />
+<code>
+ ajax-url="/api/follow/"
 </code>
-
-//Enabling Ajax call on forms
-Simple Add ajax-form attribute
-<form ajax-form="true">
-  </form>
+<br />  
+  //Use Ajax Call with Data
+ <code>
+ ajax-url="/api/follow/" ajax-data='{"member":1, "user":"facebook"}' 
+ </code>
+ <br />
+ //Enable Ajax Call on Forms
+  <code>
+  ajax-form="true"
+  </code>
+  <br />
+  //Ajax Loaders
+  <code>
+  ajax-loader="http://api.testexample.com"
+  </code>
