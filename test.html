@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="semantic.min.css" />
+<script src="jquery.min.js"></script>
+
+<link rel="stylesheet" href="toastr.min.css" />
+<script src="toastr.min.js"></script>
+
+<script src="semantic.min.js"></script>
+<script src="ajaxcall.min.js"></script>
+</head>
+<body style="background:#f7f7f7">
+
+<div class="ui container" style="margin:30px">
+<h3 class="ui header black">AJAX CALL, The easy way to Send Data via Http/Https</h3>
+
+
+
+<h3 class="ui header blue">TEST A BUTTON [ajax-url]</h3>
+  <div class="ui divider"></div> 
+
+    <p align="center">
+        <button class="ui basic blue button" ajax-url="http://localhost/test/test_server.php" ajax-type="POST" ajax-data='{"name":"John Kiringel", "age":30, "city":"New York"}'><i class="plus icon"></i>New Folder</button>
+    </p>
+	
+<h3 class="ui header blue">TEST A DIV [ajax-loader]</h3>
+  <div class="ui divider"></div> 
+	
+	
+<div id="loader_test" class="ui loading segment" ajax-loader="https://microsoft.com/" ajax-type="GET" ajax-data='{"name":"John Kiringel", "age":30, "city":"New York"}' >
+Trying to Load Microsoft Page, Failed to Load. You can <a href="#refresh" onclick="refreshAjaxLoader('loader_test');" >Refresh this Page</a> to Reload It Again
+</div>
+
+
+<h3 class="ui header blue">TEST A FORM [ajax-form ]</h3>
+  <div class="ui divider"></div> 
+  
+  
+<form ajax-form class="ui form segment" action="http://localhost/test/index_server.php">
+
+<div class="two fields">
+<div class="field">
+<label>First Name</label>
+<input type="text" name="FirstName" required placeholder="First Name" />
+</div>   
+<div class="field">
+<label>Last Name</label>
+<input type="text" name="LastName" placeholder="Last Name"/>
+</div> 
+</div>
+<div class="field">
+<label>Age</label>
+<input type="number" name="Age"  />
+</div> 
+   <p align="enter">
+     <button class="ui button blue">Send Data</button>
+   </p>
+</form>
+
+
+</div>
+</body>
+
+</html>
